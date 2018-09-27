@@ -13,7 +13,9 @@ const typeDefs = gql`
 `;
 
 const server = new ApolloServer({
-    typeDefs: typeDefs
+    typeDefs
 });
 
-server.listen();
+server.listen(4500).then(({url}) => {
+    console.log(`Server listening on ${url}`);
+});
