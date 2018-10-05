@@ -26,7 +26,7 @@ const PostSchema = new mongoose.Schema({
         default: 0
     },
     createdBy: {
-        type: mongoose.Schema.Types.objectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User'
     },
@@ -40,8 +40,8 @@ const PostSchema = new mongoose.Schema({
             default: Date.now
         },
         messageUser: {
-            type: mongoose.Schema.Types.objectId,
-            required: true
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
             ref: 'User'
         }
     }]
