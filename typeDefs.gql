@@ -32,6 +32,14 @@ type Mutation {
         email: String!, 
         password: String!
     ): User!
+
+    addPost(
+        title: String!,
+        imageUrl: String!,
+        categories: [String]!,
+        description: String!,
+        creatorId: ID!
+    ): Post!
 }
 
 type Query {
